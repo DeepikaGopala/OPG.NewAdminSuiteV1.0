@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default navbar-fixed-top top-nav-collapse">
+	  <div class="container">
+  	      <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" area-expanded="false" aria-controls="navbar">
+			      	<span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			       	<a class="navbar-brand" href="#"><img src="/images/orangelogo.jpg" alt="header_logo"/></a>
+		</div>
+
+		<div id="main-menu" class="navbar-collapse collapse navbar-responsive-collapse" aria-expanded="false">
+    	  <ul class="nav navbar-nav navbar-right headerTool col-lg-9 col-md-9 col-sm-8 col-xs-8 hidden-xs ">
+	    	  	 <li class="profile">
+		  	  		<div class="settings glyphicon glyphicon-user" ng-click="showDiv = !showDiv"></div>
+		  	  		<div class="profileSetting text-center ng-hide" ng-show="showDiv">
+		  	  			<div></div>
+		  	  			<p class="small-font"><strong>Stephen Wilson</strong> <br> steave@gmail.com</p>
+		  	  			<hr>
+		  	  			<p class="small-font"><img src="images/settings.png" alt="Generic placeholder thumbnail"> settings</p>
+		  	  			<a ui-sref="login" ng-click="logout()" href="#/"><p class="small-font"><img src="images/signout.png" alt="Generic placeholder thumbnail"> Log out</p></a>
+		  	  		</div>
+		  	  	 </li>
+	    	  	 <li><div class="notification glyphicon glyphicon-bell" href="#"></div></li>
+	    	  	 <li class="col-md-7">
+		             <form class="navbar-form ng-pristine ng-valid" role="search">
+			          <div class="input-group col-md-12 ">
+			              <input type="text" class="form-control" placeholder="Search" name="q">
+			              <img src="images/search.png" alt="Generic placeholder thumbnail" data-pin-nopin="true">
+			          </div>
+			         </form>
+		         </li>
+		       </ul>
+		</div>
+	  </div>
+	</nav>
+

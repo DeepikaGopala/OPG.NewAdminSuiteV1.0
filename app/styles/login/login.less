@@ -1,0 +1,238 @@
+/******** Global Variables for colors ********/
+@bg-color : #fff;
+@text-color:#fff;
+@brand-color:#ff9231;
+@body-bg-color:#f3f3f3;
+@nav-header-color:#ff9231;
+@footer-bg-color:#d3d0d4;
+@login-bg-color:#457898;
+@grey:#666;
+@white:#fff;
+@footer-text-color:rgb(202, 201, 201);
+@dark-footer-text-color:#909090;
+@inner-bdy-textcolor:#777;
+@transparent:transparent;
+
+
+/********  Mixins *********/
+
+*{
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	background-color:none;
+}
+.block-display{
+	width:100%;
+	height:100%;
+	margin:0;
+}
+.border-bg-same(@color){
+	background-color:@color;
+	border-color:@color;
+}
+.btn-primary-color(@bg-color,@border-color){
+	background-color:@bg-color;
+	border-color:@border-color;
+}
+.footerTextStyles(@lighter-textcolor,@dark-textcolor){
+	background-color:@lighter-textcolor;
+	color:@dark-textcolor;
+	 .text-muted{
+	   color:@dark-textcolor;
+	   margin:3% 0;
+	  }
+	.footerlinks{
+		li{
+		  a{
+			color:@dark-textcolor;
+			border:2px solid @lighter-textcolor;
+			 &:hover{
+		         background-color:transparent;
+		         border:2px solid @lighter-textcolor;
+		       }
+		    }
+		}
+	}
+}
+/********  Mixins close *********/
+
+
+html{
+   .block-display()
+}
+.bgImage{
+	background-image:url("/images/Login_normal.jpg");
+}
+.bgBlank{
+	background-image:none;
+	background-color:@body-bg-color;
+}
+body{
+	height:100%;
+	color:@inner-bdy-textcolor;
+	.small-font{font-size:12px}
+	.header{
+	  margin-bottom:20px;
+	}
+	.headerTool{
+		    position: relative;
+			top:20px;    
+    	li{
+    		margin-right: 8px;
+    		float:right !important;
+		}
+		li.profile{
+			position:relative;
+			.profileSetting{
+				position:absolute;
+				width:200px;
+				height:220px;
+				background-color:#fff;
+				left:-71px;
+				top:40px;
+				box-shadow: 1px 1px 5px 2px #ccc;
+				@media only screen and (max-width : 1355px) {
+						left:-149px;
+				}
+				div{
+					width: 60px;
+				    height: 60px;
+				    margin:10px auto 0; 
+				    border:1px solid #6f6f6f;
+				    border-radius: 50% !important;
+				    cursor:pointer;
+				    margin-bottom:@margin-top-10;
+				}
+				p{
+					cursor:pointer;
+				}
+			}
+		}
+	}
+	.headerTool1{
+		position: relative;
+    	top: 16px;
+		right: 9px;
+    	
+		li.profile{
+			position:relative;
+			.profileSetting{
+				left:-149px;
+			}
+		}
+	}
+    .navbar-default{
+	 .btn-primary-color(@white,@brand-color);  
+	  .navbar-brand{
+	  	color:@text-color;
+	  	height:60px;
+	  	.navbar-header{
+	  	  height:60px;
+	  	}
+	  }
+/********** inner header ui ***********/
+	  		  /******header tool css for survey type page******/
+	  ul{
+	  		li{
+	  			.navbar-form{
+	  			padding:0px;
+	  			}
+	  		  span{
+	  		  	color:@grey;
+	  		  	background-color:@brand-color;
+	  		  	padding:3px 9px 7px;
+	  		  	border:2px solid @brand-color;
+	  		  	
+	  		  	cursor:pointer;
+	  		  }
+	  		  .input-group{
+	  		  	top:-15px;
+	  		  	img{
+    				position: relative;
+				    float: right;
+				    top: -28px;
+				    z-index: 7;
+				    left: -7px;
+	  		  	}
+	  		  }
+	  		  #menu{
+	  		  	cursor:pointer;
+	  		  }
+	  		  .settings{
+					width: 30px;
+				    height: 30px;
+				    border:2px solid #6f6f6f;
+				    background-color: #f1f1f1;
+				    border-radius: 50% !important;
+				    position: relative;
+				    top: -5px;
+				    left: 8px;
+				    cursor:pointer;
+				} 
+	  		}
+	  	}
+	  	/******header tool css for survey type page ends here******/
+	}
+	.main{
+		display: table;
+	    width: 100%;
+	    height: 100%;
+	    margin-top:60px;
+	    button{
+		  margin-left:10px;
+		}
+	}
+	.container{
+	  .logintoplogo{
+  		margin: 0 auto;
+		text-align: center;
+		h1{
+		  margin:0 0 50px 0;
+		}
+	  }
+	  #Login{
+	  	text-align:center;
+	  	color:@footer-text-color;
+	  	.form-control{
+	  	    background:transparent;
+	  	    border:1px solid rgba(204, 204, 204, 0.26);
+	  	}
+	  	button{
+	  	    height:50px !important;
+	  	}
+
+	  }
+	}
+	.btn{
+	 .border-bg-same(@brand-color);
+	 color:@footer-text-color;
+	 font-weight:bold;
+	  &:hover{
+	    .border-bg-same(@brand-color);  
+	    color:@white;
+    	font-weight:bold;
+	  }
+	}
+	footer{
+		background-color:transparent;
+		width:100%;
+	    .footerTextStyles(@transparent,@footer-text-color);
+	}
+	.bgFooter footer{
+         .footerTextStyles(@footer-text-color,@dark-footer-text-color);
+	}
+
+	.outer-container{
+	  width:100%;
+	  height:100%;
+	  display:table;
+	  .inner-container{
+	    display:table-cell;
+	    vertical-align:middle;
+
+	  }
+	}
+}
+
+

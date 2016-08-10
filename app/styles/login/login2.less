@@ -1,0 +1,162 @@
+/******** Global Variables for colors ********/
+@bg-color : #fff;
+@text-color:#fff;
+@brand-color:#ff9231;
+@body-bg-color:#f3f3f3;
+@nav-header-color:#ff9231;
+@footer-bg-color:#d3d0d4;
+@login-bg-color:#457898;
+@grey:#666;
+@white:#fff;
+@footer-text-color:rgb(202, 201, 201);
+@dark-footer-text-color:#909090;
+@inner-bdy-textcolor:rgba(255, 255, 255, 0.78);
+@transparent:transparent;
+@dark-textcolor:#8c8c8c;
+
+
+
+
+/********  Mixins *********/
+
+*{
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	background-color:none;
+}
+.block-display{
+	width:100%;
+	height:100%;
+	margin:0;
+}
+.border-bg-same(@color){
+	background-color:@color;
+	border-color:@color;
+}
+.btn-primary-color(@bg-color,@border-color){
+	background-color:@bg-color;
+	border-color:@border-color;
+}
+.footerTextStyles(@lighter-textcolor,@dark-textcolor){
+	background-color:@lighter-textcolor;
+	color:@dark-textcolor;
+	 .text-muted{
+	    margin:3% 0;
+	  }
+	.footerlinks{
+		li{
+		  a{
+			border:2px solid @lighter-textcolor;
+			color:@dark-textcolor;
+			 &:hover{
+		         background-color:transparent;
+		         border:2px solid @lighter-textcolor;
+		       }
+		    }
+		}
+	}
+}
+/********  Mixins close *********/
+
+
+html{
+   .block-display()
+}
+.bgImage{
+	background-image:url("/images/OPG_2.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.bgBlank{
+	background-image:none;
+	background-color:@body-bg-color;
+}
+body{
+	height:100%;
+	color:@inner-bdy-textcolor;
+	text-align:left;
+    .navbar-default{
+	 .btn-primary-color(@white,@brand-color);  
+	  .navbar-brand{
+	  	color:@text-color;
+	  	height:60px;
+	  	.navbar-header{
+	  	  height:60px;
+	  	}
+	  }
+	}
+.main{
+    display:table;
+    height:91%;
+    width: 100%;
+
+    .outer{
+      display:table-cell;
+      vertical-align:middle;
+    }
+}
+	.container{
+	 /*  width:90%;
+	   max-width:90%;*/
+	  .logintoplogo{
+  		margin: 0 auto;
+		text-align: left;
+		h1{
+		  margin:0 0 50px 0;
+		}
+	  }
+	  #Login{
+	  	text-align:left;
+	  	color:@footer-text-color;
+	  	.form-control{
+	  	    background:transparent;
+	  	    border:0;
+	  	    color:rgba(255, 255, 255, 0.27) !important;
+	  	}
+	  	.label-floating{
+	  	    border-top: 1px solid rgba(255, 255, 255, 0.19);
+    		padding: 10px 0 0 0;
+	  	}
+	  	button.btn[disabled]{
+	  	height:50px !important;
+	  	background-color:rgba(223, 223, 223, 0.42) !important;
+	  	color:#fff !important;
+	  	}
+	  }
+	}
+	.btn{
+	 .border-bg-same(@brand-color);
+	 color:@footer-text-color;
+	 font-weight:bold;
+	  &:hover{
+	    .border-bg-same(@brand-color);  
+	    color:@white;
+    	font-weight:bold;
+	  }
+	}
+	footer{
+		background-color:transparent;
+		width:100%;
+	    .footerTextStyles(@transparent,@footer-text-color);
+	}
+	.bgFooter footer{
+
+         .footerTextStyles(@footer-bg-color,@dark-footer-text-color);
+	}
+
+	.outer-container{
+	  width:100%;
+	  height:100%;
+	  display:table;
+	  .inner-container{
+	    display:table-cell;
+	    vertical-align:middle;
+
+	  }
+	}
+}
+
+

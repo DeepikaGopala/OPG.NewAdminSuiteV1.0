@@ -1,0 +1,55 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	  	    <div class="row">
+	  	    	<button type="button" class="navbar-toggle visible-xs pull-left" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+		  	  <div class="navbar-header col-lg-3 col-md-3 col-sm-3 hidden-xs">
+		  	  	<a class="navbar-brand img-responsive" href="#" class=""><img src="/images/orangelogo.jpg" alt="header_logo" /></a>
+		  	  </div>
+		  	  <ul class="list-inline visible-xs headerTool headerTool1">
+		  	  	<li class="profile">
+		  	  		<div class='settings'></div>
+		  	  		<div class="profileSetting text-center">
+		  	  			<div></div>
+		  	  			<p class="small-font">Stephen Wilson <br/> steave@gmail.com</p>
+		  	  			<hr>
+		  	  			<p class="small-font"><img src = "images/settings.png" alt = "Generic placeholder thumbnail"> settings</p>
+		  	  			<a ui-sref="login"  ng-click='logout()'><p class="small-font"><img src = "images/signout.png" alt = "Generic placeholder thumbnail"> Log out</p></a>
+		  	  		</div>
+		  	  	 </li>
+		  	  	<li><img src = "images/menu.png" alt = "Generic placeholder thumbnail" id='menu'></li>
+		  	  	<li><span><img src = "images/search.png" alt = "Generic placeholder thumbnail"></span></li>
+		  	  	<li><span><img src = "images/addnew_hover.png" alt = "Generic placeholder thumbnail"></span></li>
+		  	  </ul>
+	    	  <ul class="nav navbar-nav navbar-right headerTool col-lg-9 col-md-9 col-sm-8 col-xs-8 hidden-xs ">
+	    	  	 <li class="profile">
+		  	  		<div class='settings' ng-click="showDiv = !showDiv"></div>
+		  	  		<div class="profileSetting text-center" ng-show="showDiv">
+		  	  			<div></div>
+		  	  			<p class="small-font"><strong>Stephen Wilson</strong> <br/> steave@gmail.com</p>
+		  	  			<hr>
+		  	  			<p class="small-font"><img src = "images/settings.png" alt = "Generic placeholder thumbnail"> settings</p>
+		  	  			<a ui-sref="login"  ng-click='logout()'><p class="small-font"><img src = "images/signout.png" alt = "Generic placeholder thumbnail"> Log out</p></a>
+		  	  		</div>
+		  	  	 </li>
+	    	  	 <li><img src = "images/menu.png" alt = "Generic placeholder thumbnail" id='menu'></li>
+	    	  	 <li class="hidden-xs">
+		             <form class="navbar-form" role="search">
+			          <div class="input-group col-md-12 ">
+			              <input type="text" class="form-control" placeholder="Search" name="q">
+			              <img src = "images/search.png" alt = "Generic placeholder thumbnail">
+			          </div>
+			         </form>
+		         </li>
+		         <li><span><img src = "images/upload_hover.png" alt = "Generic placeholder thumbnail"></span></li>
+	             <li><span><img src = "images/delete_hover.png" alt = "Generic placeholder thumbnail"></span></li>
+	             <li><span><img src = "images/addnew_hover.png" alt = "Generic placeholder thumbnail"></span></li>
+	              
+		          
+	          </ul>
+	        </div>
+	  </div>
+	</nav>

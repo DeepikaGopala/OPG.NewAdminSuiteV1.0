@@ -1,0 +1,28 @@
+
+
+<table class="table table-striped table-bordered col-md-9">
+			<thead>
+				
+				<tr>
+					<th></th>
+					<th>Surveys</th>
+					<th>Channel</th>
+					<th class="hidden-md hidden-xs">Invites</th>
+					<th class="hidden-md hidden-xs">Date</th>
+					<th class="hidden-md hidden-xs">Status</th>
+					
+				</tr>
+			
+			</thead>
+			<tbody>
+					<tr ng-repeat="survey in allSurveys">
+						<td><input type='checkbox' name='checkbox'></input></td>
+						<td>{{survey.Name}}</td>
+						<td>{{survey.Type}}</td>
+						<td class="hidden-md hidden-xs">{{survey.SurveyReference}}</td>
+						<td class="hidden-md hidden-xs">{{survey.CreatedDate}}</td>
+						<td class="hidden-md hidden-xs">{{survey.Status}}</td>
+						
+					</tr>
+			</tbody>
+		</table>

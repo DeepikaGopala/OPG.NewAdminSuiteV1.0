@@ -1,0 +1,279 @@
+/******** Global Variables for colors ********/
+@bg-color : #fff;
+@text-color:#fff;
+@brand-color:#ff9231;
+@body-bg-color:#f3f3f3;
+@nav-header-color:#ff9231;
+@footer-bg-color:#d3d0d4;
+@login-bg-color:#457898;
+@grey:#666;
+@white:#fff;
+@footer-text-color:rgb(202, 201, 201);
+@dark-footer-textcolor:#777;
+@inner-bdy-textcolor:rgba(255, 255, 255, 0.78);
+@transparent:transparent;
+@dark-textcolor:#8c8c8c;
+@margin-top-10:10px;
+
+@login-textcolor:#4c4c4c;
+@innerpage-text-color:#efefef;
+
+/********  Mixins *********/
+
+*{
+	-webkit-border-radius: 0 ;
+	-moz-border-radius: 0 ;
+	border-radius: 0 ;
+	background-color:none;
+}
+.block-display{
+	width:100%;
+	height:100%;
+	margin:0;
+}
+.border-bg-same(@color){
+	background-color:@color !important;
+	border-color:@color !important;
+}
+.btn-primary-color(@bg-color,@border-color){
+	background-color:@bg-color;
+	border-color:@border-color;
+}
+.footerTextStyles(@lighter-textcolor,@dark-textcolor){
+	background-color:@lighter-textcolor;
+	color:@dark-textcolor;
+	 .text-muted{
+	    margin:5% 0;
+	  }
+	.footerlinks{
+		li{
+		  a{
+			border:2px solid @lighter-textcolor;
+			color:@dark-textcolor;
+			 &:hover{
+		         background-color:transparent;
+		         border:2px solid @lighter-textcolor;
+		       }
+		    }
+		}
+	}
+}
+/********  Mixins close *********/
+
+
+/***********/
+.main-container{
+  position:relative;
+  min-height:100%;
+	
+}
+footer{
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+ 
+/***********/
+
+html{
+   .block-display()
+}
+.bgImage{
+	background-image:url("/images/OPG_3.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.bgBlank{
+	background-image:none;
+	background-color:@body-bg-color;
+}
+body{
+	height:100%;
+	color:@login-textcolor !important;
+	text-align:left;
+	.small-font{font-size:12px}
+	.headerTool{
+ 
+    	li{
+    		margin-right: 8px;
+    		margin-top:16px;
+    		float:right !important;
+		}
+		li.profile{
+			position:relative;
+			.profileSetting{
+				position:absolute;
+				width:200px;
+				height:220px;
+				background-color:#fff;
+				left:-71px;
+				top:40px;
+				box-shadow: 1px 1px 5px 2px #ccc;
+				@media only screen and (max-width : 1355px) {
+						left:-149px;
+				}
+				div{
+					width: 60px;
+				    height: 60px;
+				    margin:10px auto 0; 
+				    border:1px solid @brand-color;
+				    border-radius: 50% !important;
+				    cursor:pointer;
+				    margin-bottom:@margin-top-10;
+				}
+				p{
+					cursor:pointer;
+				}
+			}
+		}
+	}
+	.headerTool1{
+		li.profile{
+			position:relative;
+			.profileSetting{
+				left:-149px;
+			}
+		}
+	}
+    .navbar-default{
+	 .btn-primary-color(@white,#e7e7e7);  
+     box-shadow: 2px 1px 1px #eaeaea;
+	  .navbar-brand{
+	  	color:@text-color;
+	  	height:60px;
+	  	.navbar-header{
+	  	  height:60px;
+	  	}
+	  }
+	  	  /******header tool css for survey type page******/
+	  ul{
+	  		li{
+				.notification{
+					padding: 10px;
+					border-radius: 50%;
+					background-color:#f0f0f0;
+				}
+
+	  			.navbar-form{
+	  				padding:0px;
+	  				margin:0;
+	  				input{
+	  				  background-color:#f0f0f0;
+	  				}
+	  			}
+		  		span{
+		  		  	color:@grey;
+		  		  /*	background-color:@brand-color;*/
+		  		  	padding:3px 9px 7px;
+		  		  	/*border:2px solid @brand-color;*/
+		  		  	cursor:pointer;
+		  		}
+		  		.input-group{
+		  		.form-control{
+		  		   &:first-child{
+		  		     border-top-right-radius:5px;
+		  		     border-bottom-right-radius:5px;
+		  		     border-color:transparent;
+		  		     box-shadow:none;
+		  		   }
+		  		}
+		  		  	img{
+	    				position: relative;
+					    float: right;
+					    top: -28px;
+					    z-index: 7;
+					    left: -7px;
+		  		  	}
+		  		}
+		  		#menu{
+		  		  	cursor:pointer;
+		  		}
+		  		.settings{
+					    padding: 7px;
+					    width: 34px;
+					    height: 34px;
+					    background-color: #f0f0f0;
+					    border-radius: 50% !important;
+					    position: relative;
+					    left: 8px;
+					    cursor: pointer;
+					    text-align: center;
+					    border: 2px solid #f0f0f0;
+			    } 
+	  		}
+	  	}
+	  	/******header tool css for survey type page ends here******/
+
+	}
+	.main{
+	    display:table;
+	    height:93%;
+	    width: 100%;
+	    .outer{
+	      display:table-cell;
+	      vertical-align:middle;
+	    }
+	    padding-bottom:80px !important;
+	}
+	.container{
+	  .logintoplogo{
+  		margin: 0 auto;
+		text-align: left;
+		h1{
+		  margin:0 0 50px 0;
+		}
+	  }
+	  #Login{
+	  	text-align:left;
+	  	color:@login-textcolor;
+	  	.form-control{
+	  	    background:transparent;
+	  	    border:0;
+	  	    color:rgba(255, 255, 255, 0.27) !important;
+	  	}
+	  	.form-group{
+	  	  label{
+	  	  color:@login-textcolor;
+	  	  }
+	  	}
+	  	.label-floating{
+	  	    border-top: 1px solid rgba(255, 255, 255, 0.19);
+    		padding: 10px 0 0 0;
+	  	}
+	   .btn{	 
+		 .border-bg-same(@brand-color);
+		 color:@white;
+		 font-weight:bold;
+		  &:hover{
+		    .border-bg-same(@brand-color);  
+		    color:@white;
+	    	font-weight:bold;
+		  }
+		}
+	  } 
+	}
+
+	footer{
+		background-color:transparent;
+		width:100%;
+	    .footerTextStyles(@transparent,@login-textcolor);
+	}
+	.bgFooter footer{
+         .footerTextStyles(@footer-text-color,@dark-footer-textcolor);
+	}
+
+	.outer-container{
+	  width:100%;
+	  height:100%;
+	  display:table;
+	  .inner-container{
+	    display:table-cell;
+	    vertical-align:middle;
+
+	  }
+	}
+}
+
+
